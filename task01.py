@@ -62,7 +62,6 @@ plt.figure(figsize=(10,6))
 plt.barh(df_sorted1['Country Name'], df_sorted1['2021'])
 plt.xlabel('Population')
 plt.title('Top 10 Countries by Population in 2021')
-#plt.gca().invert_yaxis()
 plt.show()
 
 #bottom 10 countied based on population in the year 1990
@@ -71,14 +70,12 @@ df_sorted2 = df.sort_values(by='1990').tail(10)
 plt.barh(df_sorted2['Country Name'], df_sorted2['1990'], color='yellow')
 plt.xlabel('Population')
 plt.title('Bottom 10 Countries by Population in 1990')
-#plt.gca().invert_yaxis()
 plt.show()
 
 # Histogram for population distribution in India from 1960-2022
 data = df[df['Country Code'] == 'IND']
 years = [str(year) for year in range(1960, 2023)]
 population = data[years].values.flatten()
-#plt.figure(figsize=(10, 6))
 plt.hist(population,edgecolor='black')
 plt.xlabel('Population')
 plt.ylabel('Frequency')
@@ -89,7 +86,6 @@ plt.show()
 data = df[df['Country Code'] == 'AFG']
 years = [str(year) for year in range(1960, 2023)]
 population = data[years].values.flatten()
-#plt.figure(figsize=(10, 6))
 plt.hist(population,edgecolor='black')
 plt.xlabel('Population')
 plt.ylabel('Frequency')
